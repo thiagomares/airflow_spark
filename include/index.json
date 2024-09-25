@@ -1,0 +1,30 @@
+{
+    "type": "batch",
+    "dataSchema": {
+      "dataSource": "seu_data_source",
+      "timestampSpec": {
+        "column": "timestamp",
+        "format": "auto"
+      },
+      "dimensionsSpec": {
+        "dimensions": [
+          "Name",
+          "Value"
+        ]
+      },
+      "metricsSpec": []
+    },
+    "ioConfig": {
+      "type": "local",
+      "inputSource": {
+        "type": "parquet",
+        "paths": [
+          "file:///home/thiagomares/'Área de trabalho'/fluxos_de_trabalho/include/dados.parquet"
+        ]
+      }
+    },
+    "tuningConfig": {
+      "type": "index_parallel"
+    }
+  }
+  
